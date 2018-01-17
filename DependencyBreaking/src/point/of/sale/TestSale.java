@@ -8,10 +8,11 @@ public class TestSale {
 
 	@Test
 	public void test() {
-		Display display = new FakeDisplay();
-		Sale sale = new Sale(display);
+		FakeDisplay fakeDisplay = new FakeDisplay();
+		Sale sale = new Sale(fakeDisplay);
 		sale.scan("123");
-		fail("Not yet implemented");
+		assertEquals("123", fakeDisplay.getLastLine());
+		
 	}
 
 }
