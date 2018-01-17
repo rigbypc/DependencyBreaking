@@ -2,14 +2,20 @@ package point.of.sale;
 
 public class FakeDisplay implements Display {
 
+	String lastLine = "";
+	
 	public FakeDisplay() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Override
 	public void showLine(String line) {
-		System.out.println(line);
+		lastLine = line;
 
+	}
+	
+	public String getLastLine() {
+		return lastLine;
 	}
 
 }
