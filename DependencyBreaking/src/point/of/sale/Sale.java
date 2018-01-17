@@ -12,10 +12,10 @@ public class Sale {
 	
 	public void scan(String barcode) {
 		//display the barcode
-		artR56.display(barcode);
+		artR56.showLine(barcode);
 		
 		//lookup barcode in postgres and get item
-		artR56.display(postgres.barcode(barcode));
+		artR56.showLine(postgres.barcode(barcode));
 		
 	}
 
