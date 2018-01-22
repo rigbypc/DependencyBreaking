@@ -18,6 +18,9 @@ public class TestSale {
 	
 	@Test
 	public void testHashStorage() {
+		FakeDisplay fakeDisplay = new FakeDisplay();
+		HashStorage hashStorage = new HashStorage();
+		fail("not implemented");
 		
 	}
 
