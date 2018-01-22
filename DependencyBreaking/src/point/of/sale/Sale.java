@@ -2,12 +2,12 @@ package point.of.sale;
 
 public class Sale {
 
-	PostgresCalls postgres;
+	Storage storage;
 	Display display;
 	
-	public Sale(Display display, PostgresCalls postgres) {
+	public Sale(Display display, Storage storage) {
 		this.display = display;
-		this.postgres = postgres;
+		this.storage = storage;
 	}
 	
 	public void scan(String barcode) {
@@ -15,7 +15,7 @@ public class Sale {
 		display.showLine(barcode);
 		
 		//lookup barcode in postgres and get item
-		artR56.showLine(postgres.barcode(barcode));
+		display.showLine(storage.barcode(barcode));
 		
 	}
 
