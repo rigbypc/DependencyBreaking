@@ -12,7 +12,7 @@ public class TestSale {
 		FakeStorage fakeStorage = new FakeStorage();
 		Sale sale = new Sale(fakeDisplay, fakeStorage);
 		sale.scan("123");
-		assertEquals("123", fakeDisplay.getLastLine());
+		assertEquals("Milk, 3.99", fakeDisplay.getLastLine());
 		
 	}
 
