@@ -5,7 +5,7 @@ public class Sale {
 	PostgresCalls postgres;
 	Display display;
 	
-	public Sale(Display display), PostgresCalls postgres) {
+	public Sale(Display display, PostgresCalls postgres) {
 		this.display = display;
 		this.postgres = postgres;
 	}
