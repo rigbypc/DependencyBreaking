@@ -19,8 +19,20 @@ public class TestSale {
 	@Test
 	public void testHashStorage() {
 		FakeDisplay fakeDisplay = new FakeDisplay();
+		
 		HashStorage hashStorage = new HashStorage();
-		fail("not implemented");
+		hashStorage.put("1", "Milk, 3.99");
+		hashStorage.put("2", "Smokes, 10.99");
+		
+		Sale sale = new Sale(fakeDisplay, hashStorage);
+		sale.scan("1");
+		assertEquals("Milk, 3.99", fakeDisplay.getLastLine());
+		
+		sale.scan("2");
+		assertEquals("Smokes, 10.99", fakeDisplay.getLastLine());
+		
+		
+		
 		
 	}
 
